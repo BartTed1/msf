@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Flight Simulator</title>
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+
+<body>
+    <div class="loading">
+    </div>
+    <noscript>
+        <h3 style="padding: 0px 20px; color: #ffffff;">
+            <span style="color: #ffc400;">UWAGA </span>
+            - Twoja przeglądarka nie obsługuje skryptów JavaScript przez co niektóre elementy strony mogą wyświetlać się błędnie lub mogą być niewidoczne. Spróbuj włączyć obsługę JavaScript (pomoc: enable-javascript.com/pl/) lub otwórz stronę korzystając z innej przeglądarki.</h3>
+    </noscript>
+    <div class="head">
+        <div class="head__logo--mobile">
+            <img class="head--logo" src="src/assets/images/msflogo.webp" alt="logo">
+        </div>
+        <div class="flex between center head--center">
+            <div>
+                <h1>
+                    LEĆ GDZIEKOLWIEK
+                    <br>
+                    CHCESZ
+                </h1>
+            </div>
+            <div>
+                <img class="head--plane1" src="src/assets/images/plane1.webp" alt="">
+            </div>
+        </div>
+        <div class="head--bottom">
+            <input type="button" value="KUP TERAZ">
+        </div>
+        <div class="flex j-center wrap head__arrow--wrapper">
+            <a href="#gallery">
+                <div class="head--arrow flex j-center">
+                    <img src="src/assets/images/arrow1.svg" draggable="false" alt="v">
+                </div>
+                <span class="head--arrow-description">ZOBACZ WIĘCEJ</span>
+            </a>
+        </div>
+    </div>
+    <div class="gallery flex center j-center" id="gallery">
+        <video src="src/assets/videos/video1.webm" autoplay muted loop id="gallery__background--video"></video>
+        <div class="gallery__box flex center j-center wrap">
+            <h2 class="animation__opacity-move">PEŁNIA MOŻLIWOŚCI</h2>
+            <div class="flex gallery__wrapper animation__opacity-move">
+                <div id="g1" class="gallery__box--gallery-element unactive">
+                    <hr>
+                    <h2>DYNAMICZNA POGODA</h2>
+                    <p>
+                        Dzięki dynamicznej i realistycznej pogodzie, granica pomiędzy grą a rzeczwyistością ulega
+                        zatarciu.
+                    </p>
+                </div>
+                <div id="g2" class="gallery__box--gallery-element active">
+                    <hr>
+                    <h2>WIELKI OTWARTY ŚWIAT</h2>
+                    <p>
+                        Leć gdziekolwiek chcesz, masz do dyspozycji otwarty świat, od najbardziej sławnych miejsc, do
+                        tych znanych tylko tobie.
+                    </p>
+                </div>
+                <div id="g3" class="gallery__box--gallery-element unactive">
+                    <hr>
+                    <h2>NIEZWYKŁE<br>ODZWZOROWANIE</h2>
+                    <p>
+                        Odwiedź miejsca wyglądające jak żywe, odwzorowane z niezwykłą precyzją.
+                    </p>
+                </div>
+            </div>
+            <h3 class="pc-h"><u onmouseover="visibility(0, this);" onmouseout="visibility(1, this);">Zobacz film</u>
+            </h3>
+        </div>
+    </div>
+    <div class="images__wrapper flex wrap">
+        <div class="images--text flex center">
+            <h2 class="animation__opacity-move">
+                Lataj pomiędzy tysiącami lotnisk i milionami miast. Podróżuj nad drogami z prawdziwym ruchem drogowym
+                lub nad rwącymi rzekami przecinającymi pasma górskie.
+            </h2>
+        </div>
+        <div class="images--image" id="img1"></div>
+    </div>
+    <div class="images__wrapper flex wrap">
+        <div class="images--image" id="img2"></div>
+        <div class="images--text flex center">
+            <h2 class="animation__opacity-move">
+                Dzięki starannie zrekonstruowanym prawdziwym samolotom możesz poczuć się jak prawdziwy pilot.
+            </h2>
+        </div>
+    </div>
+    <div class="specs flex wrap">
+        <h2>Dodatkowe informacje</h2>
+        <p class="animation__opacity-move">
+            <b>Producent: </b>
+            <span>Asobo Studio</span>
+        </p>
+        <p class="animation__opacity-move">
+            <b>Wydawca: </b>
+            <span>Microsoft</span>
+        </p>
+        <p class="animation__opacity-move">
+            <b>PEGI: </b>
+            <span>3</span>
+        </p>
+        <p class="animation__opacity-move">
+            <b>Premiera: </b>
+            <span>18 sierpnia 2020</span>
+        </p>
+        <h2>Wymagania systemowe</h2>
+        <div class="table__wrapper">
+            <table class="animation__opacity-move">
+                <tr>
+                    <td>
+                        Rodzaj
+                    </td>
+                    <td>
+                        <b>Minimalne</b>
+                    </td>
+                    <td>
+                        <b>Rekomendowane</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>System Operacyjny</b>
+                    </td>
+                    <td>
+                        Windows 10<sup>*</sup>
+                    </td>
+                    <td>
+                        Windows 10<sup>*</sup>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Procesor</b>
+                    </td>
+                    <td>
+                        Intel i5-4460, Ryzen 3 1200
+                    </td>
+                    <td>
+                        Intel Core i5-8400 or AMD Ryzen 5 1500X
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Karta graficzna</b>
+                    </td>
+                    <td>
+                        NVIDIA GTX 770, Radeon RX 570 | 2GB
+                    </td>
+                    <td>
+                        Radeon RX 590 or GeForce GTX 970 | 4GB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Pamięć</b>
+                    </td>
+                    <td>
+                        8 GB RAM
+                    </td>
+                    <td>
+                        16 GB RAM
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Powierzchnia dysku</b>
+                    </td>
+                    <td>
+                        150 GB
+                    </td>
+                    <td>
+                        150 GB
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>DirectX</b>
+                    </td>
+                    <td>
+                        DirectX 11
+                    </td>
+                    <td>
+                        DirectX 11
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p><sup>*</sup> Grę można uruchomić tylko w systemie Windows 10 w wersji 1909</p>
+    </div>
+    <div class="footer">
+        <h4>Stronę wykonał Bartłomiej Teodorowicz</h4>
+        <br>
+        <h4>
+            Na stronie wykorzystano logotypy, materiały filmowe i zdjęciowe należące do osób trzecich.
+            <br>
+            Logotyp - Microsoft Flight Simulator - Microsoft
+            <br>
+            Zdjęcia:
+            <ul>
+                <li>xboxwallpapers.net</li>
+                <li>ign.com</li>
+                <li>xbox.com</li>
+                <li>wallha.com</li>
+                <li>studentpilotnews.com</li>
+            </ul>
+            filmy:
+            <br>
+            - Fragment filmu "Microsoft Flight Simulator: One Earth - Lapaland - (Santa Edition)" z kanału ObsidianAnt na Youtube
+        </h4>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
